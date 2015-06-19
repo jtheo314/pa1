@@ -1,0 +1,32 @@
+<template name="display">
+
+{{#if currentUser}}
+
+<div class="bg-primary">
+	<h1>Display</h1>
+</div>
+
+<h4><mark>Select from below the most recent blogs:</mark></h4>
+<table class="table table-striped">
+	<thead>
+		<tr class="success">
+			<th>Blog Name:</th><th>Time:</th><th>Date:</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each record}}
+		  {{> bloglist}}
+		 {{/each}}
+	</tbody>
+</table>
+
+{{else}}
+		<h2>You must be logged in to see the blogs!</h2>
+{{/if}}
+</template>
+
+<template name="bloglist">
+	<tr>
+		<td>{{name}}</td> <td>{{time}}</td> <td>{{date}}</td>
+	</tr>
+</template>

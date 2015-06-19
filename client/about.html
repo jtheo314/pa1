@@ -1,0 +1,27 @@
+<template name="about">
+<h1>About</h1>
+
+ {{theTime}}
+<hr/>
+
+Looking for creative minds to join our team!
+Current Board of Directors:
+<table class="table table-condensed">
+	<thead>
+		<tr><th>Name</th><th>Email</th></tr>
+	</thead>
+	<tbody>
+{{#each team}}
+  {{> teamrow}}
+{{/each}}
+	</tbody>
+</table>
+
+</template>
+
+<template name="teamrow">
+   <tr>
+   	  <td>{{name}}</td>
+   	  <td>{{email}}</td>
+   </tr>
+</template>
