@@ -1,0 +1,19 @@
+<template name="draw">
+
+    {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+    {{/contentFor}}
+  
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Draw!</h1>
+    {{/contentFor}}
+
+
+	<h1>This is a graphics demo</h1>
+	<button id="drawIt">draw it</button><hr/>
+	<canvas id="drawSpace" width="600" height="300">
+		Your browster doesn't support the canvas. Get the latest version of Chrome or FF or...
+
+</canvas>
+<hr/>
+</template>

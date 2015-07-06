@@ -1,5 +1,52 @@
+<!--
+<template name="about">
+
+    {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+    {{/contentFor}}
+  
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">About the Brandeis JBS App</h1>
+    {{/contentFor}}
+
+	
+    {{#ionView}}
+      {{#ionContent}}
+      {{#ionList}}
+
+	  	{{#each team}}
+			{{> teamrow}}
+		{{/each}}
+
+	{{/ionList}}
+
+
+
+     {{/ionContent}}
+  {{/ionView}}
+   
+</template>
+
+
+
+<template name="teamrow">
+        {{#ionItem path="sponsors" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+          {{name}} - {{email}}
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+</template>
+
+
+-->
+
+
 <template name="about">
 <h1>About</h1>
+
+<p>
+This application is intended to serve as a voice diary and/or memo. Simpy press record, say what is on your mind, and the text and audio will be saved onto the Display page for the user to listen to or read any time they would like.
+</p>
 
  {{theTime}}
 <hr/>
@@ -25,3 +72,5 @@ Current Board of Directors:
    	  <td>{{email}}</td>
    </tr>
 </template>
+
+

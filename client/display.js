@@ -1,6 +1,6 @@
 var blogs =
 	[
-		{name:"Tim Hickey"    , time: ""	, date: "something" },
+		{name:"blog name"    , time: ""	, date: "something" },
     ];
 
 Template.display.helpers(
@@ -8,7 +8,6 @@ Template.display.helpers(
 	record:  function(){
 		return Record.find({}, {sort: {time: -1}, limit: 10});	
 	}
-	blog: blogs
  }
 )
 
@@ -35,4 +34,4 @@ Template.schedule.helpers(
    date: month+"/"+day+"/"+year,
    time: hr+":"+min+":"+sec
  }
-)
+)*/
