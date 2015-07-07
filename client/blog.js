@@ -25,6 +25,13 @@ Template.blog.events({
     Blogs.remove(this._id);
   },
 
+    'click .say': function(event){
+    currentBlog = this._id;
+    var msg = new SpeechSynthesisUtterance(Blogs.findOne({_id:this._id}).blog);
+    if (theVoice) msg.voice=theVoice;
+    window.speechSynthesis.speak(msg);
+  },
+
   'click #start_button': function(event){
     startDictation(event);
   }
